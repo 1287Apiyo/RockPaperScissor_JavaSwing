@@ -8,6 +8,18 @@ public class RockPaperScissors {
 
     private String computerChoice;
 
+    public String getComputerChoice() {
+        return computerChoice;
+    }
+
+    public int getComputerScore() {
+        return computerScore;
+    }
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
     ///store the scores so that we can retrieve the values and display it to the frontend
     private int computerScore, playerScore;
 
@@ -49,6 +61,17 @@ public class RockPaperScissors {
             }
         }else {
             //computer chooses scissors
+            if (playerChoice.equals("Rock")) {
+                result = "Player wins";
+                playerScore++;
+            } else if (playerChoice.equals("Paper")) {
+                result = "Computer wins";
+                computerScore++;
+
+            } else {
+                result = "Draw";
+            }
         }
+        return result;
     }
 }
