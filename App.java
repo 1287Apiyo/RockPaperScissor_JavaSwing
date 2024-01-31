@@ -10,6 +10,7 @@ public class App {
 
               //display the gui
                 rockPaperScissorsGUI.setVisible(true);
+
             }
         });
     }
